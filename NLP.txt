@@ -1,0 +1,190 @@
+Natural Language Processing (NLP) is a branch of Artificial Intelligence (AI) that enables computers to understand, interpret, analyze, and generate human language such as English, Hindi or any other language
+
+*******Why is NLP needed?
+
+Humans communicate through text and speech, but computers understand only numbers and programming instructions. NLP acts as a bridge between human language and computers by converting text into a form that machines can process
+
+******Applications of NLP
+Chatbots (ChatGPT, customer support bots)
+Voice assistants (Siri, Alexa, Google Assistant)
+Language translation (Google Translate)
+Sentiment analysis (positive/negative reviews)
+Spam email detection
+Text summarization
+Spell checking and grammar correction
+Search engines
+Speech recognition
+
+*******Advantages of NLP
+
+Automates text processing
+Saves time and effort
+Improves customer service
+Handles large amounts of text data
+Supports multiple languages
+
+****Text Classification and Translation Pipeline
+user created content is messy and unstructured which does not make any sense hence first we organize text using classification models
+input-analyze-output
+how to train model?-training data,decode words 
+messy-bad
+pretty-good
+
+Pipeline Steps
+
+1. Input Text
+
+The user provides text.
+Example: "I love learning Python."
+
+2. Text Preprocessing
+
+Convert text to lowercase.
+Remove punctuation, numbers, and extra spaces.
+Tokenize the text into words.
+Remove stop words (e.g., is, the, and).
+
+3. Feature Extraction
+
+Convert text into numerical form using techniques like:
+Bag of Words (BoW)
+TF-IDF
+Word Embeddings
+
+4. Text Classification
+
+A machine learning or deep learning model predicts the category.
+
+Example:
+
+Input: "The movie was amazing!"
+Output: Positive Sentiment
+
+Other classification tasks:
+Spam vs. Not Spam
+News Category
+Language Detection
+Emotion Detection
+
+5. Translation (Optional)
+If translation is needed, the classified or processed text is translated into the target language.
+
+
+6. Output
+
+The system returns the final classified label and/or translated text.Real-Life Examples
+Gmail → Spam email detection (Text Classification)
+Google Translate → Language Translation
+Amazon Reviews → Sentiment Analysis
+ChatGPT → Text understanding and generation
+News Apps → Automatic news categorization
+
+******translating with neural network
+
+Neural Machine Translation is an NLP technique that uses Artificial Neural Networks  to automatically translate text from one language to another Unlike traditional translation methods, NMT understands the context and meaning of the entire sentence before generating the translation.
+
+How it Works
+Input Sentence
+Example: "I love learning Python"
+
+Encoder
+Reads the input sentence.
+Converts the words into numerical representations (embeddings).
+Captures the meaning of the sentence.
+
+Neural Network Processing
+The network learns relationships between words and languages using large datasets.
+Modern systems often use Transformer models.
+
+Decoder
+Generates the translated sentence word by word.
+Output
+Example:
+english to hindi
+
+
+TEXT NORMALIZATION
+raw text from user(mixed aplhabets)
+
+******translation pipeline
+
+A Translation Pipeline is the sequence of steps used to translate text from one language to another using NLP and machine learning models.
+
+Steps in a Translation Pipeline
+1.Input Text
+User enters text in the source language.
+Example: "How are you?"
+
+2. Text Preprocessing
+Clean the text.
+Remove unnecessary symbols and extra spaces.
+Split the sentence into words (tokenization).
+
+3. Language Detection
+Detect the source language.
+Example: English.
+
+4. Encoding
+Convert words into numerical representations (embeddings) that a machine can understand.
+
+5. Translation Model
+A Neural Machine Translation (NMT) model, usually based on Transformers, processes the encoded text and generates the translation.
+
+6. Decoding
+convert the numerical output back into words in the target language.
+
+7. Output
+Display the translated sentence.
+
+
+
+*****TEXT CLASSIFICATION
+
+is a ml tech that assigns a set of predefined categories to open ended text
+used to organize , structure and categorize diff types of text
+
+How It Works
+
+Input Text
+Example: "This movie is amazing!"
+
+Text Preprocessing
+Convert text to lowercase
+
+Remove punctuation
+Tokenize the text
+
+Remove stop words
+Feature Extraction
+
+Convert text into numerical features using techniques like Bag of Words, TF-IDF, or Word Embeddings.
+
+Classification Model
+The model predicts the appropriate category.
+
+Output
+
+Text Classification is an NLP technique that automatically categorizes text into predefined labels It is widely used in spam detection, sentiment analysis, news categorization, language detection, and emotion recognition
+
+ Training
+
+Training is the process of teaching a machine learning model using labeled data so it can learn patterns and relationships
+
+Prediction
+
+Prediction is the process of using the trained model to classify or predict the category of new, unseen text
+
+Example
+Training: Teach the model using thousands of labeled emails Spam / Not Spam
+Prediction: When a new email arrives the trained model predicts whether it is Spam or Not Spam
+
+
+*****Text Clustering 
+
+Text Clustering is an unsupervised machine learning technique that groups similar text documents together without using predefined labels.
+ when we have lot of data and we want to break it into segment and categories we use clustering
+ techniques - k- means , DBSCAN, spectral clustering and hierarchical clustering
+
+
+
+
