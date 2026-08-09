@@ -1,0 +1,77 @@
+*****NLTK- THE NATURAL LANGUAGE TOOLKIT
+library that helps us to implement nlp tools
+It provides tools to process and analyze human language
+functions
+1.Tokenization - Splits text into words or sentences
+eg- paragraph into sentences
+2.Tagging - Identify nouns, verbs, adjectives etc
+             used to identify parts of speech each word is tagged with its pos
+3. Parsing- analysing the grammactical structure of sentences
+4.Text classification- used in spam detection
+5.semantic reasoning- used to identify complex relation between words and concept 
+                       helps a computer understand what a sentence actually means
+
+******text Preprocessing 
+Text preprocessing is the process of cleaning and preparing raw text before giving it to a machine learning or NLP model
+4 steps are
+tokenization
+Stemming - reducing words to their base form by removing prefixes or suffixes
+Lemmatization- reduces a word to its base form  but it uses language dictionaries to produce a meaningful word
+stop word removal- eg-is , or , the 
+
+*******Tokenization
+process of breaking text into smaller units called tokens A token can be a word sentence or character
+
+Types of Tokenization
+
+Word Tokenization
+Breaks a sentence into individual words
+
+"I love learning Python."
+["I", "love", "learning", "Python", "."]
+
+Sentence Tokenization
+Breaks a paragraph into individual sentences.
+
+"I love Python NLP is interesting."
+→["I love Python.", "NLP is interesting."]
+
+Character Tokenization:
+Breaks a word into individual characters
+
+
+use-
+Makes text easier to process
+Helps analyze individual words or sentences
+first steps in NLP preprocessing
+Useful for tasks such as sentiment analysis, text classification, and translation
+
+******Stop Word Removal
+words that may not provide much useful information for certain NLP tasks
+
+Why 
+Reduces the amount of unnecessary text
+Makes processing faster
+Reduces the number of words the model needs to consider
+Can help some NLP tasks focus on more meaningful words
+
+
+*****Stemming
+ process of reducing words to a root or stem by removing prefixes or suffixes
+
+why
+ 
+Groups different forms of words together
+Reduces the number of unique words
+Makes text processing simpler and fast
+
+*****Lemmatization
+
+process of converting a word into its meaningful dictionary base form called a lemma
+
+why
+
+Produces meaningful base words
+Groups different forms of the same word
+Takes the context and grammatical information into account
+Useful when the actual meaning of words is important
