@@ -58,6 +58,7 @@ Can help some NLP tasks focus on more meaningful words
 
 *****Stemming
  process of reducing words to a root or stem by removing prefixes or suffixes
+ breaking down the words into their base form, runs=run
 
 why
  
@@ -65,9 +66,28 @@ Groups different forms of words together
 Reduces the number of unique words
 Makes text processing simpler and fast
 
+
+Drawbacks of Stemming
+
+May produce meaningless words
+It can remove too many letters and create words that aren't actual words
+Example: studies → studi
+Loss of meaning
+Different words may be reduced to the same stem even when their meanings are different
+Over-stemming
+Sometimes too much of the word is removed
+Under-stemming
+Sometimes related words are not reduced to the same stem
+Doesn't understand context
+Stemming mainly uses rules to cut word endings It doesn't understand the actual meaning or grammar of a sentence
+
+
+to overcome this we use lemmatization
+
 *****Lemmatization
 
 process of converting a word into its meaningful dictionary base form called a lemma
+meaning of word is retained 
 
 why
 
@@ -75,3 +95,20 @@ Produces meaningful base words
 Groups different forms of the same word
 Takes the context and grammatical information into account
 Useful when the actual meaning of words is important
+
+
+
+
+
+**** difference 
+| Stemming                                             Lemmatization                       
+| 
+| Removes prefixes/suffixes using simple rules  Finds the meaningful dictionary base form  |
+| Does not understand the meaning of the word  | Uses linguistic knowledge and context     |
+| Faster                                       | Comparatively slower                      |
+| Less accurate                                | More accurate                             |
+| May produce meaningless words                | Produces valid words                      |
+| `studies → studi`                            | `studies → study`                         |
+| `running → run`                              | `running → run`                           |
+| `better → better`                            | `better → good`                           |
+| Easy to implement                            | More computationally complex              |
