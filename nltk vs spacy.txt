@@ -1,0 +1,17 @@
+* nltk vs spacy
+core philosophy
+nltk is mainly designed for learning, research and experimentation in nlp. it gives you many separate tools and lets you understand how different nlp techniques work step by step. because of this, it is commonly used in academic work and for teaching nlp concepts.
+
+spacy is designed more for real world applications and production use. instead of giving only individual tools, it provides a complete nlp pipeline that can process text efficiently and perform tasks such as tokenization, pos tagging, named entity recognition, dependency parsing and word vectors.
+
+* nltk is more academic
+
+nltk is useful when we want to learn how nlp works internally or experiment with different algorithms
+nltk provides tools for
+tokenization
+stemming
+lemmatization
+pos tagging
+parsing
+classification
+corpus handling
