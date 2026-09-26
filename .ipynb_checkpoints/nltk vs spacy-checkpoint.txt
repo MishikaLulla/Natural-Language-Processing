@@ -1,10 +1,10 @@
-* nltk vs spacy
+************* nltk vs spacy ************
 core philosophy
-nltk is mainly designed for learning, research and experimentation in nlp. it gives you many separate tools and lets you understand how different nlp techniques work step by step. because of this, it is commonly used in academic work and for teaching nlp concepts.
+nltk is mainly designed for learning, research and experimentation in nlp. it gives us many separate tools and lets us understand how different nlp techniques work step by step. because of this, it is commonly used in academic work and for teaching nlp concepts.
 
-spacy is designed more for real world applications and production use. instead of giving only individual tools, it provides a complete nlp pipeline that can process text efficiently and perform tasks such as tokenization, pos tagging, named entity recognition, dependency parsing and word vectors.
+spacy is designed more for real world applications and production use. instead of giving only individual tools, it provides a complete nlp pipeline that can process text efficiently and perform tasks such as tokenization, pos tagging, named entity recognition, dependency parsing and word vectors
 
-* nltk is more academic
+****  nltk is more academic ****
 
 nltk is useful when we want to learn how nlp works internally or experiment with different algorithms
 nltk provides tools for
@@ -15,3 +15,194 @@ pos tagging
 parsing
 classification
 corpus handling
+
+import nltk
+from nltk.tokenize import word_tokenize
+text = "i enjoy learning nlp"
+print(word_tokenize(text))
+
+here we can directly use a particular nltk function for the task we need
+
+
+
+****  spacy is production ready  ****
+
+spacy focuses more on building practical nlp applications
+it provides an integrated pipeline, so you can process text and get several types of information from it.
+for example:
+import spacy
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("apple is a company")
+for token in doc:
+    print(token.text, token.pos_)
+
+spacy is commonly preferred when you are building things like chatbots, information extraction systems, document processing systems and other real world nlp applications
+
+
+
+
+
+** performance and speed **
+
+nltk is generally more focused on flexibility and learning, so it can involve more individual steps and may not be as optimized for large scale processing.
+
+spacy is designed with performance in mind many of its core components are implemented using optimized code, including cpython based components, which helps it process large amounts of text efficiently.
+
+nltk → learning and experimentation
+spacy → fast and practical nlp applications
+
+python and cpython
+
+both nltk and spacy are python libraries, so you normally use them through python.
+
+nltk is primarily written in python and is easy to understand and experiment with.
+
+spacy uses python as its interface but also uses optimized c and cython based components internally for performance. this helps spacy perform computationally intensive nlp operations efficiently.
+
+
+** flexibility ** 
+
+nltk gives you a lot of flexibility because it provides many independent tools and datasets you can choose the particular algorithm or technique you want and combine different components yourself
+
+spacy is also customizable, but it is more pipeline oriented. you normally work with its predefined processing pipeline and modify or extend it when required.
+
+nltk → more freedom to experiment with individual components
+spacy → structured pipeline that is easier to use for applications
+
+
+
+
+*** key task comparison ***
+
+nltk can perform many basic and advanced nlp tasks such as tokenization, stemming, lemmatization, pos tagging, parsing, classification and corpus processing
+
+spacy also supports major nlp tasks such as tokenization, pos tagging, lemmatization, dependency parsing, named entity recognition and vector similarity.
+
+ difference is that nltk provides many algorithms and resources separately, while spacy provides a more integrated pipeline where several tasks can be performed together
+
+
+nltk = academic + learning + research + flexibility
+
+spacy = production + speed + complete pipeline + practical applications
+
+
+
+
+
+**** pretrained models and resources ****
+
+nltk provides many corpora, datasets, lexical resources and language-processing tools. it is especially useful when you want to study nlp concepts or experiment with different approaches.
+
+nltk resources include
+
+wordnet
+brown corpus
+gutenberg corpus
+reuters corpus
+stopwords
+
+nltk is therefore very useful for learning, research and experimentation because you can work with different datasets and algorithms.
+
+
+
+spacy provides pretrained language models that are ready to process text. these models can perform multiple tasks through a single nlp pipeline.
+
+example:
+
+nlp = spacy.load("en_core_web_sm")
+
+spacy models can provide:
+
+tokenization
+pos tagging
+lemmatization
+dependency parsing
+named entity recognition
+word vectors
+
+larger models such as en_core_web_md and en_core_web_lg can also be used when you need word vectors and vector similarity.
+
+
+
+*** ecosystem and use cases *****
+
+nltk has a strong academic and educational ecosystem. it is commonly used for:
+
+learning nlp
+college projects
+research
+experimentation
+working with corpora
+testing different algorithms
+
+it gives you many individual components, so you can choose exactly what you want to use.
+spacy has a stronger focus on real-world and production applications. it is commonly useful for:
+
+chatbots
+information extraction
+document processing
+text analysis
+named entity recognition
+semantic similarity
+large scale text processing
+
+spacy can also work with other machine learning and deep learning tools, so it can be included as part of a larger application
+performance comparison
+
+nltk is mainly designed around flexibility and experimentation. it is perfectly suitable for normal academic projects, but its design is not primarily focused on processing huge amounts of text as quickly as possible.
+
+spacy is designed with performance and efficiency as important goals. its processing pipeline and optimized components make it suitable for handling larger amounts of text.
+
+
+
+nltk → flexibility first
+spacy → performance + practical usage
+
+
+
+summary
+
+nltk and spacy are both powerful python libraries for nlp, but their main focus is different.
+
+nltk is more suitable when you want to learn nlp concepts, experiment with algorithms, work with corpora or conduct academic research.
+
+spacy is more suitable when you want to build practical nlp applications, use pretrained models, process text efficiently or deploy an nlp system.
+
+
+
+nltk
+↓
+academic
+research
+learning
+corpora
+flexibility
+
+spacy
+↓
+production
+pretrained models
+speed
+complete pipeline
+real world applications
+which one should you choose?
+
+choose nltk when:
+
+you are learning nlp for college or exams
+you want to understand individual nlp techniques
+you need linguistic datasets and corpora
+you want to experiment with different algorithms
+you are doing academic or research-oriented work
+
+choose spacy when:
+
+you are building an actual nlp application
+you want ready-to-use pretrained models
+you need fast text processing
+you need pos tagging, ner, dependency parsing and lemmatization together
+you need vector similarity or word embeddings
+you are working with a large amount of text
+exam line to remember
+
+nltk is mainly learning, research and flexibility oriented, while spacy is mainly production, pretrained-model and performance oriented.
